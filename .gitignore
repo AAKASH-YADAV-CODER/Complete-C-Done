@@ -11,11 +11,14 @@
 node_modules/
 
 # Ignore compiled files
-*.o        # Object files
-*.out      # Executable files
-*.dll      # DLL files (Windows)
-*.so       # Shared object files (Linux)
-*.dylib    # Dynamic libraries (macOS)
+*.o        
 
 # Ignore binary files
 *.bin
+
+# Ignore Unix executable files
+*
+
+# Ignore Unix executable files without extensions
+*.*
+*/*.*
