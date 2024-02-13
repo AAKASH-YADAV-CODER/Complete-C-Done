@@ -1,0 +1,78 @@
+1> STL ==> Standard Template(Generic Nature) Library
+When we create any program that we consume value or collection of values so for storing them we need Data Structure 
+like :- 
+Array, 
+Linked List   (forward_list, list), 
+Queue  (deque, priority_queue(max element)), 
+Stack, 
+Set   (set , multiset), 
+Map   (map , multimap) etc
+
+This include Three(3) Components :- 1)ALGORITHMS 2)CONTAINERs 3)ITERATORS
+1>ALGORITHMS :--> These are functions perform on Containers such as :-
+*) search()
+*)sort()
+*)binary_search()
+*)reverse()
+*)concat()
+*)copy()
+*)union()
+*)intersection()
+*)merge()
+*)heap() etc
+
+
+2>CONTAINERS :--> all data Structure we discuss above at line 3 to 9 are contain built in classes in STL and built-in classes are know as CONTAINERS in STL.
+
+*)vector<DT> v; Functions => push_back(), popback(), insert(), empty(), remove(), size(), etc
+*)list<DT> l; Functions =>front(), back(), push_front(), popfront(), push_back(), popback(), insert(), empty(),remove(), size() This is doubly linked list .
+*)forward_list<dT> l; Functions =>front(), back(), push_front(), popfront() , insert(), empty(), remove(), size() This is singly linked list.
+*)deque<DT> q; Functions =>front(), back(), push_front(), popfront(), push_back(), popback(), insert(), empty(),remove(), size() etc double ended Queue. we perform operation on both port.
+
+*)priority_queue<DT> q; Functions => push(),pop(),empty(),size() etc this is perform operation on maximum element like if we want to pop() out element so it delete maximum element from unorder collection of data(Hash Tables).
+*)stack<DT> s; Functions => push(),pop(),empty(),size() etc LIFO
+
+*)set<DT> s; Functions => insert(),remove(),size(),empty() etc so this contain only UNIQUE element in given set of data.
+*)multiset<DT> s; Functions => insert(),remove(),size(),empty() etc Duplicate are allowed
+*)map<DT,DT> m; Functions => insert(),remove(),size(),empty() etc it contain value in pair
+like map<int,string> m; m.insert(pair<int,string>(1," Aakash ")); This work on hash tables 
+*)multimap<DT,DT> m;Functions => insert(),remove(),size(),empty() etc but in this we contain multiple key but value should be different like pair<int,string>(1,"Aakash") , pair<int,string>(1,"Tanash") etc
+
+
+3> ITERATORS : --> There is 3 way to iterate 1)ForEach loop 2)normal way for(int i=0)like this 3)By iterator class
+1)ForEach ==> 
+for(auto num:arr){
+    cout<<num<<endl;
+}
+
+2) Normal Way ==>
+for(int i=0;i<=arr;i++){
+    cout<<i<<endl;
+}
+3)By iterator class ==>
+vector<int>::iterator it;
+for(it=arr.begin();it!=arr.end();it++){
+    cout<<*it<<endl;
+    we use ptr it because it is doing dereference means deep copy applying actual value gonna be change 
+}
+
+
+This is reverse iterator
+vector<int>::reverse_iterator rit;
+for(rit=arr.rbegin();rit!=arr.rend();rit--){
+    cout<<*rit<<endl;
+    we use ptr it because it is doing dereference means deep copy applying actual value gonna be change 
+}
+
+This iterator class is available for all CONTAINERS
+map<int,string>::iterator it;
+
+for searching from map
+it=m.find(1);
+cout<<it->first<<" "<<it->second<<endl;
+
+for traversing in map
+for(it=m.begin();it!=m.end();it++){
+    cout<<it->first<<" "<<it->second<<endl;
+    we use ptr it because it is doing dereference means deep copy applying actual value gonna be change 
+}

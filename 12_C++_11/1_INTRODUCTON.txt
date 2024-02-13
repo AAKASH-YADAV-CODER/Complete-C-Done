@@ -1,0 +1,28 @@
+In c++ 11 version There is five concept established : -
+
+1 > auto key word :- This is like data type and we can use it to store result which is combination of two or
+    more different data types.There is on more keyword which is decltype(variable name) vari = value;
+
+2 >final keyword :- It is used for stop overriding and inheritance of class. we can't inherit if we use final in front of class or member function of class.
+
+3>Lambda Expression :- This is like immediate invoke function very short to write.
+ 
+ syntax :- const v = [capture list](parameter list)->returntype{body}(argument list and immediate execution);
+ 
+ capture list :- this is local variable.
+ parameter list and argument list how they used we know and also body(logic code).
+
+
+4>Smart Pointer :- It is used for making automatically de-allocation of memory like other language use garbage collection means the value which are using unwanted memory they automatically get deleted and protect memory leak.
+
+*)unique_ptr<ClassName> ptr(new ClassName(arg,arg)); problem we can't share object between two ptr
+*)shared_ptr<ClassName> ptr(new ClassName(arg,arg)); is this we can and also see by using ptr.use_count().
+*)weak_ptr<ClassName> ptr(new ClassName(arg,arg));this is like share ptr 
+
+5> Ellipsis(...) :- it is like rest operator by using ellipsis we can use n number of variable in very  short way this reduce the code of line 
+syntax : - fun(how many variable pass, ...){
+    va_list list;
+    va_start(list,n);
+    va_arg(list,int);
+    va_end(list);
+}
