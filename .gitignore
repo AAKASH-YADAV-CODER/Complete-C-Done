@@ -16,9 +16,3 @@ node_modules/
 # Ignore binary files
 *.bin
 
-# Ignore Unix executable files
-*
-
-# Ignore Unix executable files without extensions
-*.*
-*/*.*
